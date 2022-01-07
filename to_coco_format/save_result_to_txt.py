@@ -1,7 +1,14 @@
 from .compute_polygon_area import compute_polygon_area
 
 def save_result_to_txt(txt_save_path,prediction,polygons):
+    """
+    将预测的值，存为txt，后续eval
 
+    :param txt_save_path:
+    :param prediction:
+    :param polygons:
+    :return:
+    """
     file = open(txt_save_path,'w')
     classes = prediction['instances'].pred_classes
 
