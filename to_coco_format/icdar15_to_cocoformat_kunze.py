@@ -27,6 +27,15 @@ train_image_save_path = "/home/datasets/textGroup/ICDAR2015/task4.1Text Localiza
 test_image_save_path = "/home/datasets/textGroup/ICDAR2015/task4.1Text Localization/test_image_icdar2015_to_coco.json"
 
 def icdar_to_coco(path, categories_list, ann_dir, save_path):
+    """
+    将icdar15转成coco格式，包括segmentation以及bbox
+
+    :param path:
+    :param categories_list:
+    :param ann_dir:
+    :param save_path:
+    :return:
+    """
     images = CocoGtData.gen_images(path) #生成图片列表
     categories = CocoGtData.gen_categories(categories_list)  # 生成标签，只有一个文本类
     annotations = []

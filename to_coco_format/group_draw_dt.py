@@ -15,7 +15,15 @@ gt_json_file = r"C:\Users\Weng\Desktop\OneDrive - stu.xmut.edu.cn\compute_labor\
 
 def draw_labelme_dt(source, gt_json_file, json_file="", label='segmentation'):
     #不如先打开json，然后图片id相同的，把segementation添加进去同一个
+    """
+    用dt画labelme，坤泽的库
 
+    :param source:
+    :param gt_json_file:
+    :param json_file:
+    :param label:
+    :return:
+    """
     cocodata = CocoData(gt_json_file, dt_json_file)
     for image, annotation in cocodata.group_dt():
         image_file = os.path.join(source, image["file_name"])

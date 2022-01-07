@@ -42,6 +42,14 @@ icdar_image_path = "/home/datasets/textGroup/ICDAR2013/Task2.4_End_to_End/ch2_tr
 json_path = "/home/wengkangming/map_file/TextFuse11111-master/icdar2013/"
 
 def icdar2013_to_cocoformat(icdar_image_path, json_path,is_train_gt=True):
+    """
+    将icadar2013转成coco
+
+    :param icdar_image_path:
+    :param json_path:
+    :param is_train_gt:
+    :return:
+    """
     annotations = []
     categories = []
     images = []

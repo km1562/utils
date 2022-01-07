@@ -16,7 +16,7 @@ json_file = r"C:\Users\Weng\Desktop\OneDrive - stu.xmut.edu.cn\compute_labor\map
 
 def draw_labelme_dt(source, json_file="", label='segmentation'):
     """
-    根据label_json去画dt，用labelme展示
+    根据label_json去画dt，用labelme展示，我自己写的好像特别麻烦
 
     :param source:
     :param json_file:
